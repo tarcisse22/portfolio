@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarcisse | Portfolio</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: #3498db;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .navbar.navbar-default {
+      background-color: #3498db;
+      border-color: #3498db;
+      margin-bottom: 20px;
+    }
+    .navbar-default .navbar-nav > li > a,
+    .navbar-default .navbar-brand,
+    .navbar-default .navbar-text {
+      color: #fff !important;
+    }
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+      background-color: rgba(255,255,255,0.14) !important;
+      color: #fff !important;
+      border-radius: 8px;
+    }
+    .navbar-toggle {
+      border-color: rgba(255,255,255,0.6) !important;
+    }
+    .navbar-toggle .icon-bar {
+      background-color: #fff !important;
+    }
+
+    #current-time {
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
+    .soft-card {
+      background: rgba(255,255,255,0.94);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    }
+
+    .hero h1 { margin-top: 0; }
+    .hero .tagline {
+      font-size: 18px;
+      opacity: 0.95;
+      margin-top: 10px;
+    }
+    .quote {
+      font-size: 16px;
+      margin-top: 14px;
+      font-style: italic;
+      opacity: 0.95;
+    }
+
+    .skill-badge {
+      display: inline-block;
+      background: rgba(52, 152, 219, 0.12);
+      border: 1px solid rgba(52, 152, 219, 0.25);
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin: 6px 6px 0 0;
+      font-weight: 600;
+    }
+
+    .project-card img {
+      border-radius: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+    }
+    .project-card h3 { margin-top: 0; }
+
+    .project-tag {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #0a4f9e;
+      background: #e8f2ff;
+      border: 1px solid #bfd8ff;
+      border-radius: 999px;
+      padding: 4px 9px;
+    }
+
+    footer {
+      color: #fff;
+      padding: 24px 0 30px;
+      text-align: center;
+    }
+    footer a { color: #fff; text-decoration: underline; }
+
+    .mt-10 { margin-top: 10px; } 
+    .mt-15 { margin-top: 15px; }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#home">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-GYtkOZfW3l2OVWDd9h4CPBPxxOnunW-Vg&usqp=CAU"
+            alt="Ninja profile logo"
+            style="height: 28px; margin-top: -4px;"
+          />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="navbar-text">
+            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+            <span id="current-time">--:--:--</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <section id="home" class="soft-card hero">
+      <h1>Tarcisse Ndjibu</h1>
+      <p class="tagline">Detailed Orientend Software Engineer</p>
+      <p>I am a Computer Science major focused on Software Engineering and practical web development.</p>
+      <p class="quote">"Crafting tomorrow's solutions, one line of code at a time."</p>
+
+      <p class="mt-15">
+        <a class="btn btn-primary btn-lg" href="#projects">View Projects</a>
+      </p>
+
+      <p class="mt-10" style="max-width: 900px;">
+        I am a CS major building real projects that show practical coding skills, problem solving, and clean UI work.
+        I am currently focused on Software Engineering paths and project-based learning.
+      </p>
+    </section>
+
+    <section id="projects" class="soft-card">
+      <h2 style="margin-top:0;">Projects</h2>
+      <p>Below is a list of cool fun projects that i have worked on and completed.</p>
+
+      <div class="row mt-15">
+        <div class="col-sm-4">
+          <div class="soft-card project-card">
+            <span class="project-tag">Portfolio</span>
+            <h3>Personal Portfolio</h3>
+            <img class="img-responsive"
+                 src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=60"
+                 alt="Portfolio preview">
+            <p>My portfolio dashboard with background, skills, and projects. Built to present my CS and SWE growth to recruiters.</p>
+            <p>
+              <a class="btn btn-primary" href="Ndjibu Tarcisse Resume.pdf" target="_blank" rel="noopener">View Resume</a>
+            </p>
+          </div>
+        </div>
+
+       <div class="col-sm-4">
+  <div class="soft-card project-card">
+    <span class="project-tag">Live Sports</span>
+    <h3>Premier League Live Table</h3>
+    <img class="img-responsive"
+         src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=60"
+         alt="Premier League project preview">
+    <p>Live Premier League standings dashboard with a real-time clock and automatic match-result updates.</p>
+    <p>
+      <a class="btn btn-primary" href="premierleague.html" target="_blank" rel="noopener">Open Project</a>
+    </p>
+  </div>
+</div>
+
+
+        <div class="col-sm-4">
+          <div class="soft-card project-card">
+            <span class="project-tag">Featured</span>
+            <h3>LaLiga Live Table</h3>
+            <img class="img-responsive"
+                 src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=800&q=60"
+                 alt="LaLiga project preview">
+            <p>Live LaLiga standings dashboard with real-time clock and automatic table updates.</p>
+            <p>
+              <a class="btn btn-primary" href="laliga.html" target="_blank" rel="noopener">Open Project</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="soft-card">
+      <h2 style="margin-top:0;">About Me</h2>
+      <p>
+        I am a Computer Science major interested in Software Engineering.
+        I focus on building clean, responsive websites and improving through practical projects,
+        problem solving, and data-driven UI work.
+      </p>
+
+      <div class="mt-10">
+        <span class="skill-badge">HTML</span>
+        <span class="skill-badge">CSS</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">Bootstrap</span>
+        <span class="skill-badge">Python</span>
+      </div>
+    </section>
+
+    <section id="contact" class="soft-card">
+      <h2 style="margin-top:0;">Contact</h2>
+      <p>Email: <a href="mailto:isimplytarcisse@gmail.com">isimplytarcisse@gmail.com</a></p>
+      <p>Phone: +1 (404) 406-7835</p>
+      <p>Address: 273 Main Street, Atlanta, Georgia, 30067</p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Tarcisse Ndjibu | Built with love using HTML, CSS, JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    function pad2(n) { return (n < 10) ? ("0" + n) : ("" + n); }
+
+    function updateTime() {
+      var now = new Date();
+      var h = now.getHours();
+      var m = pad2(now.getMinutes());
+      var s = pad2(now.getSeconds());
+
+      var ampm = (h >= 12) ? "PM" : "AM";
+      var h12 = h % 12;
+      if (h12 === 0) h12 = 12;
+
+      $("#current-time").text(h12 + ":" + m + ":" + s + " " + ampm);
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>

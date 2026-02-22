@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Multi-League Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+    body { background:#3498db; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .soft-card{
+      background: rgba(255,255,255,0.94);
+      border-radius: 16px;
+      padding: 22px;
+      margin: 18px auto;
+      max-width: 820px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    }
+    .btn-space { margin-right: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="soft-card">
+      <h1 style="margin-top:0;">Live Multi-League Standings Dashboard</h1>
+      <p>Select a league to view live standings.</p>
+
+      <p>
+        <a class="btn btn-primary btn-space" href="premierleague.html">Premier League</a>
+        <a class="btn btn-primary btn-space" href="laliga.html">LaLiga</a>
+        <a class="btn btn-default btn-space" href="index.html">← Back to Portfolio</a>
+      </p>
+
+      <hr>
+      <p style="margin-bottom:0;">
+        <strong>Engineering Focus:</strong> API integration, auto-refresh, data normalization, and resilient UI rendering.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

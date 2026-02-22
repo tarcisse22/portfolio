@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -29,12 +29,6 @@
       background-color: rgba(255,255,255,0.14) !important;
       color: #fff !important;
       border-radius: 8px;
-    }
-    .navbar-toggle {
-      border-color: rgba(255,255,255,0.6) !important;
-    }
-    .navbar-toggle .icon-bar {
-      background-color: #fff !important;
     }
 
     #current-time {
@@ -80,7 +74,6 @@
       height: 170px;
       object-fit: cover;
     }
-    .project-card h3 { margin-top: 0; }
 
     .project-tag {
       display: inline-block;
@@ -99,7 +92,6 @@
       padding: 24px 0 30px;
       text-align: center;
     }
-    footer a { color: #fff; text-decoration: underline; }
 
     .mt-10 { margin-top: 10px; } 
     .mt-15 { margin-top: 15px; }
@@ -107,158 +99,137 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-        </button>
 
-        <a class="navbar-brand" href="#home">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM-GYtkOZfW3l2OVWDd9h4CPBPxxOnunW-Vg&usqp=CAU"
-            alt="Ninja profile logo"
-            style="height: 28px; margin-top: -4px;"
-          />
-        </a>
-      </div>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#home">Tarcisse</a>
+    </div>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="navbar-text">
-            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-            <span id="current-time">--:--:--</span>
-          </li>
-        </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="navbar-text">
+        <span id="current-time">--:--:--</span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+<section id="home" class="soft-card hero">
+  <h1>Tarcisse Ndjibu</h1>
+  <p class="tagline">Detail-Oriented Software Engineer</p>
+  <p>Computer Science major focused on Software Engineering and practical web development.</p>
+  <p class="quote">"Crafting tomorrow's solutions, one line of code at a time."</p>
+
+  <p class="mt-15">
+    <a class="btn btn-primary btn-lg" href="#projects">View Projects</a>
+  </p>
+</section>
+
+<section id="projects" class="soft-card">
+  <h2 style="margin-top:0;">Projects</h2>
+  <p>Selected projects showcasing practical software engineering, UI development, and live data integration.</p>
+
+  <div class="row mt-15">
+
+    <!-- Portfolio -->
+    <div class="col-sm-4">
+      <div class="soft-card project-card">
+        <span class="project-tag">Portfolio</span>
+        <h3>Personal Portfolio</h3>
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=60">
+        <p>Responsive portfolio showcasing projects, technical focus, and software engineering growth.</p>
+        <a class="btn btn-primary" href="technical.html">Technical Overview</a>
       </div>
     </div>
-  </nav>
 
-  <div class="container">
-    <section id="home" class="soft-card hero">
-      <h1>Tarcisse Ndjibu</h1>
-      <p class="tagline">Detailed Orientend Software Engineer</p>
-      <p>I am a Computer Science major focused on Software Engineering and practical web development.</p>
-      <p class="quote">"Crafting tomorrow's solutions, one line of code at a time."</p>
+    <!-- Combined Sports Dashboard -->
+    <div class="col-sm-4">
+      <div class="soft-card project-card">
+        <span class="project-tag">Engineering Project</span>
+        <h3>Live Multi-League Standings Dashboard</h3>
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=60">
+        <p>
+          Dynamic standings dashboard integrating multiple leagues using live API data,
+          automatic refresh cycles, and resilient error handling.
+        </p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript (Fetch API)</p>
+        <a class="btn btn-primary" href="premierleague.html">Launch Dashboard</a>
+      </div>
+    </div>
 
-      <p class="mt-15">
-        <a class="btn btn-primary btn-lg" href="#projects">View Projects</a>
-      </p>
+    <!-- Space For New Project -->
+    <div class="col-sm-4">
+      <div class="soft-card project-card">
+        <span class="project-tag">Coming Soon</span>
+        <h3>Data Structures Visualizer</h3>
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=60">
+        <p>
+          Interactive visualization of stacks, queues, and linked lists to demonstrate
+          core computer science fundamentals.
+        </p>
+        <a class="btn btn-default" href="#">In Progress</a>
+      </div>
+    </div>
 
-      <p class="mt-10" style="max-width: 900px;">
-        I am a CS major building real projects that show practical coding skills, problem solving, and clean UI work.
-        I am currently focused on Software Engineering paths and project-based learning.
-      </p>
-    </section>
-
-    <section id="projects" class="soft-card">
-      <h2 style="margin-top:0;">Projects</h2>
-      <p>Below is a list of cool fun projects that i have worked on and completed.</p>
-
-      <div class="row mt-15">
-        <div class="col-sm-4">
-          <div class="soft-card project-card">
-            <span class="project-tag">Portfolio</span>
-            <h3>Personal Portfolio</h3>
-            <img class="img-responsive"
-                 src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=60"
-                 alt="Portfolio preview">
-            <p>My portfolio dashboard with background, skills, and projects. Built to present my CS and SWE growth to recruiters.</p>
-            <p>
-              <a class="btn btn-primary" href="technical.html">Technical Overview</a>
-            </p>
-          </div>
-        </div>
-
-       <div class="col-sm-4">
-  <div class="soft-card project-card">
-    <span class="project-tag">Live Sports</span>
-    <h3>Premier League Live Table</h3>
-    <img class="img-responsive"
-         src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=60"
-         alt="Premier League project preview">
-    <p>Live Premier League standings dashboard with a real-time clock and automatic match-result updates.</p>
-    <p>
-      <a class="btn btn-primary" href="premierleague.html" target="_blank" rel="noopener">Open Project</a>
-    </p>
   </div>
+</section>
+
+<section id="about" class="soft-card">
+  <h2>About Me</h2>
+  <p>
+    I build clean, responsive web interfaces and focus on practical problem solving.
+    My goal is to grow into a strong software engineer through real-world projects and system thinking.
+  </p>
+
+  <div class="mt-10">
+    <span class="skill-badge">HTML</span>
+    <span class="skill-badge">CSS</span>
+    <span class="skill-badge">JavaScript</span>
+    <span class="skill-badge">Bootstrap</span>
+    <span class="skill-badge">Python</span>
+    <span class="skill-badge">C</span>
+  </div>
+</section>
+
+<section id="contact" class="soft-card">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:isimplytarcisse@gmail.com">isimplytarcisse@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/tarcisse22" target="_blank">github.com/tarcisse22</a></p>
+</section>
+
 </div>
 
-
-        <div class="col-sm-4">
-          <div class="soft-card project-card">
-            <span class="project-tag">Featured</span>
-            <h3>LaLiga Live Table</h3>
-            <img class="img-responsive"
-                 src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=800&q=60"
-                 alt="LaLiga project preview">
-            <p>Live LaLiga standings dashboard with real-time clock and automatic table updates.</p>
-            <p>
-              <a class="btn btn-primary" href="laliga.html" target="_blank" rel="noopener">Open Project</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="soft-card">
-      <h2 style="margin-top:0;">About Me</h2>
-      <p>
-        I am a Computer Science major interested in Software Engineering.
-        I focus on building clean, responsive websites and improving through practical projects,
-        problem solving, and data-driven UI work.
-      </p>
-
-      <div class="mt-10">
-        <span class="skill-badge">HTML</span>
-        <span class="skill-badge">CSS</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">Bootstrap</span>
-        <span class="skill-badge">Python</span>
-      </div>
-    </section>
-
-    <section id="contact" class="soft-card">
-      <h2 style="margin-top:0;">Contact</h2>
-      <p>Email: <a href="mailto:isimplytarcisse@gmail.com">isimplytarcisse@gmail.com</a></p>
-      <p>Phone: +1 (404) 406-7835</p>
-      <p>Address: 273 Main Street, Atlanta, Georgia, 30067</p>
-    </section>
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Tarcisse Ndjibu</p>
   </div>
+</footer>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Tarcisse Ndjibu | Built with love using HTML, CSS, JavaScript</p>
-    </div>
-  </footer>
+<script>
+function pad2(n) { return (n < 10) ? ("0" + n) : ("" + n); }
 
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+function updateTime() {
+  var now = new Date();
+  var h = now.getHours();
+  var m = pad2(now.getMinutes());
+  var s = pad2(now.getSeconds());
+  var ampm = (h >= 12) ? "PM" : "AM";
+  var h12 = h % 12;
+  if (h12 === 0) h12 = 12;
+  document.getElementById("current-time").textContent =
+    h12 + ":" + m + ":" + s + " " + ampm;
+}
 
-  <script>
-    function pad2(n) { return (n < 10) ? ("0" + n) : ("" + n); }
+updateTime();
+setInterval(updateTime, 1000);
+</script>
 
-    function updateTime() {
-      var now = new Date();
-      var h = now.getHours();
-      var m = pad2(now.getMinutes());
-      var s = pad2(now.getSeconds());
-
-      var ampm = (h >= 12) ? "PM" : "AM";
-      var h12 = h % 12;
-      if (h12 === 0) h12 = 12;
-
-      $("#current-time").text(h12 + ":" + m + ":" + s + " " + ampm);
-    }
-
-    updateTime();
-    setInterval(updateTime, 1000);
-  </script>
 </body>
 </html>
 

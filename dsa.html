@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Structures Visualizer</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <style>
+    body { background:#3498db; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .soft-card{
+      background: rgba(255,255,255,0.94);
+      border-radius: 16px;
+      padding: 22px;
+      margin: 18px auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    }
+    .wrap { max-width: 980px; }
+    .pill {
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      background: rgba(52,152,219,0.12); border:1px solid rgba(52,152,219,0.25);
+      font-weight: 700; margin-right:6px; margin-top:6px;
+    }
+    .nav-tabs>li>a { font-weight:700; }
+    .row-gap { margin-top: 12px; }
+    .viz {
+      min-height: 140px;
+      border: 1px dashed rgba(0,0,0,0.2);
+      border-radius: 14px;
+      padding: 16px;
+      background: rgba(255,255,255,0.8);
+    }
+    .node {
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: #fff;
+      margin: 6px;
+      font-weight: 800;
+    }
+    .arrow {
+      display:inline-block;
+      margin: 0 4px;
+      font-weight: 900;
+      opacity: 0.7;
+    }
+    .hint { color: rgba(0,0,0,0.65); margin-top: 10px; }
+    .status { margin-top: 10px; font-weight: 700; }
+    .btn-space { margin-right: 8px; margin-top: 8px; }
+    .topbar a { color:#fff; text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div class="container wrap">
+    <div class="topbar" style="padding: 14px 0;">
+      <a href="index.html">← Back to Portfolio</a>
+    </div>
+
+    <div class="soft-card">
+      <h1 style="margin-top:0;">Data Structures Visualizer</h1>
+      <p class="hint">
+        Interactive visualizations for <strong>Stack</strong>, <strong>Queue</strong>, and <strong>Linked List</strong>.
+        Built to demonstrate core CS fundamentals with clean UI and real-time state updates.
+      </p>
+
+      <div>
+        <span class="pill">JavaScript</span>
+        <span class="pill">DOM Updates</span>
+        <span class="pill">Data Structures</span>
+      </div>
+    </div>
+
+    <div class="soft-card">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#stack" aria-controls="stack" role="tab" data-toggle="tab">Stack</a></li>
+        <li role="presentation"><a href="#queue" aria-controls="queue" role="tab" data-toggle="tab">Queue</a></li>
+        <li role="presentation"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">Linked List</a></li>
+      </ul>
+
+      <div class="tab-content" style="padding-top: 14px;">
+
+        <!-- STACK -->
+        <div role="tabpanel" class="tab-pane active" id="stack">
+          <div class="row row-gap">
+            <div class="col-sm-4">
+              <label>Value</label>
+              <input id="stackVal" class="form-control" placeholder="e.g. 10" />
+              <button class="btn btn-primary btn-space" onclick="stackPush()">Push</button>
+              <button class="btn btn-default btn-space" onclick="stackPop()">Pop</button>
+              <button class="btn btn-default btn-space" onclick="stackClear()">Clear</button>
+              <div id="stackStatus" class="status"></div>
+            </div>
+            <div class="col-sm-8">
+              <h4 style="margin-top:0;">Visual</h4>
+              <div id="stackViz" class="viz"></div>
+              <p class="hint">Top of stack is shown on the <strong>right</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUEUE -->
+        <div role="tabpanel" class="tab-pane" id="queue">
+          <div class="row row-gap">
+            <div class="col-sm-4">
+              <label>Value</label>
+              <input id="queueVal" class="form-control" placeholder="e.g. A" />
+              <button class="btn btn-primary btn-space" onclick="queueEnq()">Enqueue</button>
+              <button class="btn btn-default btn-space" onclick="queueDeq()">Dequeue</button>
+              <button class="btn btn-default btn-space" onclick="queueClear()">Clear</button>
+              <div id="queueStatus" class="status"></div>
+            </div>
+            <div class="col-sm-8">
+              <h4 style="margin-top:0;">Visual</h4>
+              <div id="queueViz" class="viz"></div>
+              <p class="hint">Front is on the <strong>left</strong>, rear is on the <strong>right</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINKED LIST -->
+        <div role="tabpanel" class="tab-pane" id="list">
+          <div class="row row-gap">
+            <div class="col-sm-4">
+              <label>Value</label>
+              <input id="listVal" class="form-control" placeholder="e.g. 7" />
+              <button class="btn btn-primary btn-space" onclick="listAppend()">Append</button>
+              <button class="btn btn-default btn-space" onclick="listRemove()">Remove (value)</button>
+              <button class="btn btn-default btn-space" onclick="listClear()">Clear</button>
+              <div id="listStatus" class="status"></div>
+            </div>
+            <div class="col-sm-8">
+              <h4 style="margin-top:0;">Visual</h4>
+              <div id="listViz" class="viz"></div>
+              <p class="hint">Nodes are connected left → right. Removes the first matching value.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="soft-card">
+      <h3 style="margin-top:0;">Why this project matters</h3>
+      <ul>
+        <li>Shows core CS fundamentals (stack/queue/list) with real-time state changes.</li>
+        <li>Demonstrates DOM rendering, clean UI layout, and user-driven updates.</li>
+        <li>Good foundation to expand into sorting/pathfinding visualizations later.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script>
+    // ---------- helpers ----------
+    function byId(id){ return document.getElementById(id); }
+    function escapeHtml(str){
+      return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[s]));
+    }
+    function renderNodes(container, values, withArrows){
+      if(values.length === 0){
+        container.innerHTML = '<div class="hint">Empty</div>';
+        return;
+      }
+      container.innerHTML = values.map((v, i) => {
+        const node = `<span class="node">${escapeHtml(v)}</span>`;
+        const arrow = withArrows && i < values.length - 1 ? `<span class="arrow">→</span>` : '';
+        return node + arrow;
+      }).join('');
+    }
+
+    // ---------- STACK ----------
+    const stack = [];
+    function stackPush(){
+      const v = byId('stackVal').value.trim();
+      if(!v){ byId('stackStatus').textContent = 'Enter a value to push.'; return; }
+      stack.push(v);
+      byId('stackVal').value = '';
+      byId('stackStatus').textContent = `Pushed "${v}". (LIFO)`;
+      renderStack();
+    }
+    function stackPop(){
+      if(stack.length === 0){ byId('stackStatus').textContent = 'Stack is empty.'; return; }
+      const v = stack.pop();
+      byId('stackStatus').textContent = `Popped "${v}".`;
+      renderStack();
+    }
+    function stackClear(){
+      stack.length = 0;
+      byId('stackStatus').textContent = 'Stack cleared.';
+      renderStack();
+    }
+    function renderStack(){
+      // Show bottom-left to top-right; top is right
+      renderNodes(byId('stackViz'), stack, false);
+    }
+
+    // ---------- QUEUE ----------
+    const queue = [];
+    function queueEnq(){
+      const v = byId('queueVal').value.trim();
+      if(!v){ byId('queueStatus').textContent = 'Enter a value to enqueue.'; return; }
+      queue.push(v);
+      byId('queueVal').value = '';
+      byId('queueStatus').textContent = `Enqueued "${v}". (FIFO)`;
+      renderQueue();
+    }
+    function queueDeq(){
+      if(queue.length === 0){ byId('queueStatus').textContent = 'Queue is empty.'; return; }
+      const v = queue.shift();
+      byId('queueStatus').textContent = `Dequeued "${v}".`;
+      renderQueue();
+    }
+    function queueClear(){
+      queue.length = 0;
+      byId('queueStatus').textContent = 'Queue cleared.';
+      renderQueue();
+    }
+    function renderQueue(){
+      renderNodes(byId('queueViz'), queue, false);
+    }
+
+    // ---------- LINKED LIST (simple array-backed visual) ----------
+    const list = [];
+    function listAppend(){
+      const v = byId('listVal').value.trim();
+      if(!v){ byId('listStatus').textContent = 'Enter a value to append.'; return; }
+      list.push(v);
+      byId('listVal').value = '';
+      byId('listStatus').textContent = `Appended "${v}".`;
+      renderList();
+    }
+    function listRemove(){
+      const v = byId('listVal').value.trim();
+      if(!v){ byId('listStatus').textContent = 'Type a value to remove.'; return; }
+      const idx = list.indexOf(v);
+      if(idx === -1){
+        byId('listStatus').textContent = `Value "${v}" not found.`;
+      } else {
+        list.splice(idx, 1);
+        byId('listStatus').textContent = `Removed "${v}".`;
+      }
+      renderList();
+    }
+    function listClear(){
+      list.length = 0;
+      byId('listStatus').textContent = 'Linked list cleared.';
+      renderList();
+    }
+    function renderList(){
+      renderNodes(byId('listViz'), list, true);
+    }
+
+    // initial renders
+    renderStack(); renderQueue(); renderList();
+  </script>
+</body>
+</html>
